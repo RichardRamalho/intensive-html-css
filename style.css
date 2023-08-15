@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-purple: hsla(320, 69%, 42%, 1);
+  --color-blue: hsla(244, 38%, 28%, 1);
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-bg-01: hsla(283, 47%, 97%, 1);
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Mulish", sans-serif;
+  background-color: var(--color-bg-01);
+  color: var(--color-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+/* TÍTULO E IMGS */
+
+header img {
+  width: 100%;
+  display: block;
+}
+
+header h1 {
+  color: var(--color-purple);
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  text-align: center;
+  margin-top: 1.8rem;
+}
+
+header p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-blue);
+  text-align: center;
+}
+
+header #arrow {
+  width: 5.8rem;
+  height: 10.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3.5rem auto;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--color-purple);
+  margin-bottom: 4.3rem;
+}
+
+main {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+}
+
+/* CARDS SECTION */
+
+#cards {
+  background: var(--color-blue);
+  padding: 5.3rem 3.9rem 5.5rem;
+  display: grid;
+  gap: 4.9rem;
+}
+
+.card {
+  background-color: var(--color-bg-01);
+  border: none;
+  border-radius: 1.8rem;
+  padding: 2.6rem;
+}
+
+.card img {
+  width: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-text h3 {
+  color: var(--color-purple);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.card-text p {
+  font-size: 1.6rem;
+  color: var(--color-blue);
+  font-weight: 600;
+  line-height: 2.4rem;
+}
+/**/
+
+/* FORM */
+
+#contact {
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+#contact form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  border: 0.15rem solid var(--color-blue);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.4rem;
+  color: var(--color-blue);
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+
+#contact form input {
+  padding-left: 4rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: var(--color-blue);
+}
+
+#contact form textarea {
+  height: 12.6rem;
+  resize: none;
+}
+
+#name {
+  background: url(./src/images/person.svg);
+  background-repeat: no-repeat;
+  background-position: 1.4rem;
+}
+
+#email {
+  background: url(./src/images/at.svg);
+  background-repeat: no-repeat;
+  background-position: 1.4rem;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2.4rem;
+  margin-bottom: 6.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  padding: 1.6rem;
+  height: 4.5rem;
+  width: 15.5rem;
+  background-color: var(--color-blue);
+  color: hsla(0, 0%, 100%, 1);
+  border: none;
+  border-radius: 1.6rem;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+/**/
+footer {
+  background-color: var(--color-blue);
+  color: var(--color-bg-01);
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.6rem;
+}
+
+@media (min-width: 700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.9rem 10.3rem 10.9rem;
+    max-height: 83.6rem;
+  }
+
+  #app #astronaut {
+    order: 2;
+    width: 72rem;
+    height: 73rem;
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    order: 1;
+    margin-top: 25rem;
+    margin-right: 2.8rem;
+  }
+
+  .header-text h1 {
+    font-size: 5.8rem;
+    margin-bottom: .8rem;
+  }
+
+  .header-text p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+
+  .header-text #arrow {
+    margin: 0;
+  }
+
+  #cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+
+  #cards .card {
+    padding: 3.2rem 1.3rem 3.2rem 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  #contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9.2rem;
+    height: 62.2rem;
+    background: url(./src/images/stars.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-left: 10.9rem;
+  }
+
+  #contact form {
+    flex: 1; 
+  }
+
+  #contact .stars {
+    flex: 1;
+  }
+}
